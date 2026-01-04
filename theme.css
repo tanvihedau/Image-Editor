@@ -1,6 +1,17 @@
 :root{
     /* bg Colors */
     --bg-primary-color: rgb(17,17,17);
+    --bg-secondary-color: rgb(34,34,34);
+    --bg-active-color: rgb(233,233,233);
+    --bg-danger-color: rgb(205, 129, 125);
+    --bg-success-color: rgb(125, 205, 129);
+
+    /* text colors */
+    --text-primary-color: rgb(255,255,255);
+    --text-secondary-color: rgb(190,190,190);
+    --text-tertiary-color: rgb(128,128,128);
+    --text-active-color: rgb(60, 44, 44);
+
 
     /* paddings */
     --padding-sm:0.5rem;

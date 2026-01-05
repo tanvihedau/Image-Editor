@@ -1,59 +1,137 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-html, body{
-    width : 100%;
-    height: 100%;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: var(--bg-primary-color);
-    color:var(--text-primary-color);
-}
-main{
-    width: 100%;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-main section{
-    width : 100%;
-    padding : var(--padding-2xl);
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: var(--bg-primary-color);
+  color: var(--text-primary-color);
 }
-.btn{
-   padding : var(--padding-sm) var(--padding-lg);
-   border : none;
-   outline : none;
-   border-radius: var(--border-radius-md);
-   background-color : var(--bg-active-color);
-   cursor : pointer;
-   color:var(--text-active-color);
+
+main {
+  width: 100%;
 }
-#reset-btn{
-    background-color: var(--bg-danger-color);
-    color :var(--text-primary-color);
+
+main section {
+  width: 100%;
+  padding: var(--padding-2xl);
+  display: flex;
+  gap: var(--gutter-2xl);
 }
-#download-btn{
-    background-color: var(--bg-success-color);
-    color :var(--text-primary-color);
+
+.btn {
+  padding: var(--padding-sm) var(--padding-lg);
+  border: none;
+  outline: none;
+  border-radius: var(--border-radius-md);
+  background-color: var(--bg-active-color);
+  cursor: pointer;
+  color: var(--text-active-color);
+}
+
+#reset-btn {
+  background-color: var(--bg-danger-color);
+  color: var(--text-primary-color);
+}
+
+#download-btn {
+  background-color: var(--bg-success-color);
+  color: var(--text-primary-color);
+}
+
+main section .left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-lg);
+  width: 70%;
+  align-items: center;
+}
+
+main section .right {
+  width: 30%;
+  background-color: var(--bg-secondary-color);
+  padding: var(--padding-lg);
+  border-radius: var(--border-radius-2xl);
+}
+
+main section .top {
+  display: flex;
+  align-items: center;
+  gap: var(--gutter-lg);
+}
+
+main section .bottom {
+  background-color: rgb(230, 192, 224);
+  width: 100%;
+  padding: var(--padding-2xl);
+  aspect-ratio: 5/3;
+  border-radius: var(--border-radius-2xl);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section .bottom .placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.6;
+}
+
+main section .bottom .placeholder i {
+  font-size: 8rem;
+}
+
+main section .bottom .placeholder p {
+  font-size: var(--font-size-lg);
 }
 main section .right{
-    width : 30%;
+  display : flex;
+  flex-direction:column;
+  gap: var(--gutter-lg);
 }
-main section .left{
-    display : flex;
-    flex-direction: column;
-    gap : var(--gutter-lg);
-    width : 70%;
-    align-items: center;
+
+main section .right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter-lg);
 }
-main section .top{
-    display:flex;
-    align-items:center;
-    gap: var(--gutter-lg);
+
+main section .right .filter {
+  width: 100%;
 }
-main section .bottom{
-    background-color: rgb(197, 131, 46);
-    width: 100%;
-    padding : var(--padding-2xl);
-    aspect-ratio: 5/3;
-    border-radius: var(--border-radius-2xl);
+
+main section .right .filter input {
+  width: 100%;
+  outline: none;
+  margin-top: var(--margin-sm);
+  appearance: none;
 }
+
+main section .right .filter input::-webkit-slider-runnable-track {
+  height: 3px;
+  background-color: var(--bg-active-color);
+  border-radius: var(--border-radius-lg);
+}
+
+main section .right .filter input::-moz-range-track {
+  height: 3px;
+  background-color: var(--bg-active-color);
+}
+
+main section .right .filter input::-webkit-slider-thumb {
+  cursor: pointer;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
+  margin: -8.5px;
+}
+

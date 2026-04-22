@@ -1,84 +1,88 @@
+//filters object to store filter values and properties
 const filters = {
   brightness: {
     value: 100,
+    unit: "%",
     min: 0,
     max: 200,
-    unit: "%",
   },
   contrast: {
-    value: 0,
-    min: 0,
-    max: 100,
+    value: 100,
     unit: "%",
+    min: 0,
+    max: 200,
   },
   exposure: {
-    value: 0,
-    min: 0,
-    max: 100,
+    value: 100,
     unit: "%",
+    min: 0,
+    max: 200,
   },
   saturation: {
-    value: 0,
-    min: 0,
-    max: 100,
+    value: 100,
     unit: "%",
-  },
-  hueRotation: {
-    value: 0,
     min: 0,
-    max: 100,
+    max: 200,
+  },
+  hueRotation:{
+    value: 0,
     unit: "deg",
+    min: 0,
+    max: 360,
   },
   blur: {
     value: 0,
-    min: 0,
-    max: 100,
     unit: "px",
+    min: 0,
+    max: 20,
   },
   grayscale: {
     value: 0,
+    unit: "%",
     min: 0,
     max: 100,
-    unit: "%",
   },
   sepia: {
     value: 0,
+    unit: "%",
     min: 0,
     max: 100,
-    unit: "%",
   },
   opacity: {
-    value: 0,
+    value: 100,
+    unit: "%",
     min: 0,
     max: 100,
-    unit: "%",
   },
-  invert: {
+  invert:{
     value: 0,
+    unit: "%",
     min: 0,
     max: 100,
-    unit: "%",
   },
-};
-function createFilterElement(name, unit = "%", value, min, max) {
-    const div = document.createElement("div");
-    div.classList.add("filter");
-
-    const input = document.createElement("input");
-    input.type = "range";
-    input.name = name;
-    input.value = value;
-    input.min = min;
-    input.max = max;
-    input.id = name;
-
-    const p = document.createElement("p");
-    p.innerText = name
-    div.appendChild(p)
-    div.appendChild(input)
-
-    return div;
 }
- Object.keys(filters);//.forEach(filterName =>{
+//fuction to create filter element
+function createFilterElement(name, unit="%", value, min, max) {
 
-// })
+  const div = document.createElement("div")
+  div.classList.add("filter")
+
+  const input = document.createElement("input")
+  input.type = "range"
+  input.name = name
+  input.value = value
+  input.min = min
+  input.max = max
+
+  const p = document.createElement("p")
+  p.innerText = name
+  
+  div.appendChild(p)
+  div.appendChild(input)
+
+  return div
+}
+//filter object into array and loop through it to create filter elements
+Object.keys(filters).forEach(filter => {
+  console.log(filters[filter])
+})

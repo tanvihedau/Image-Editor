@@ -1,16 +1,20 @@
 :root{
     /* bg Colors */
-    --bg-primary-color: rgb(17,17,17);
-    --bg-secondary-color: rgb(34,34,34);
-    --bg-active-color: rgb(233,233,233);
-    --bg-danger-color: rgb(205, 129, 125);
-    --bg-success-color: rgb(125, 205, 129);
+    --bg-primary-color: rgb(10, 14, 20);
+    --bg-secondary-color: rgb(21, 30, 43);
+    --bg-active-color: rgb(223, 233, 243);
+    --bg-danger-color: rgb(216, 109, 109);
+    --bg-success-color: rgb(86, 186, 143);
+    --bg-canvas-color: rgb(16, 24, 35);
+    --bg-canvas-alt-color: rgb(28, 41, 58);
 
     /* text colors */
-    --text-primary-color: rgb(255,255,255);
-    --text-secondary-color: rgb(190,190,190);
-    --text-tertiary-color: rgb(128,128,128);
-    --text-active-color: rgb(60, 44, 44);
+    --text-primary-color: rgb(245, 248, 252);
+    --text-secondary-color: rgb(169, 184, 202);
+    --text-tertiary-color: rgb(124, 142, 164);
+    --text-active-color: rgb(10, 19, 30);
+    --accent-color: rgb(103, 194, 245);
+    --border-subtle-color: rgb(52, 72, 96);
 
 
     /* paddings */
@@ -45,5 +49,9 @@
     --border-radius-lg :0.3rem;
     --border-radius-xl :0.4rem;
     --border-radius-2xl :0.5rem;
+
+    /* shadow */
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.25);
+    --shadow-lg: 0 18px 45px rgba(0, 0, 0, 0.35);
 
 }

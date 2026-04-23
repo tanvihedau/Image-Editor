@@ -158,4 +158,10 @@ canvas{
   max-height: 800px;
 }
 
+.presets{
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter-md);
+}
+
 

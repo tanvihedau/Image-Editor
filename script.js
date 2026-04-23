@@ -63,6 +63,7 @@ const imgInput = document.querySelector("#image-input")
 const canvasCtx = imageCanvas.getContext("2d")
 const resetButton = document.querySelector("#reset-btn")
 const downloadButton = document.querySelector("#download-btn")
+const presetContainer = document.querySelector(".presets")
 let file = null
 let image = null
 
@@ -216,4 +217,108 @@ downloadButton.addEventListener("click", () => {
   link.href = imageCanvas.toDataURL() //set the link href to the canvas data URL
   link.click() //simulate a click on the link to trigger the download
 })
-                         
+
+const presets = {
+  normal: {
+    brightness: 100,
+    contrast: 100,
+    saturation: 100,
+    hueRotation: 0,
+    blur: 0,
+    grayscale: 0,
+    sepia: 0,
+    opacity: 100,
+    invert: 0,
+  },
+
+  drama: {
+    brightness: 90,
+    contrast: 160,
+    saturation: 130,
+    hueRotation: 0,
+    blur: 0,
+    grayscale: 10,
+    sepia: 0,
+    opacity: 100,
+    invert: 0,
+  },
+
+  vintage: {
+    brightness: 110,
+    contrast: 85,
+    saturation: 75,
+    hueRotation: 15,
+    blur: 1,
+    grayscale: 20,
+    sepia: 45,
+    opacity: 95,
+    invert: 0,
+  },
+
+  cinematic: {
+    brightness: 95,
+    contrast: 140,
+    saturation: 120,
+    hueRotation: 8,
+    blur: 0,
+    grayscale: 5,
+    sepia: 10,
+    opacity: 100,
+    invert: 0,
+  },
+
+  coolBlue: {
+    brightness: 105,
+    contrast: 120,
+    saturation: 115,
+    hueRotation: 190,
+    blur: 0,
+    grayscale: 0,
+    sepia: 0,
+    opacity: 100,
+    invert: 0,
+  },
+
+  warmSunset: {
+    brightness: 115,
+    contrast: 110,
+    saturation: 140,
+    hueRotation: 25,
+    blur: 0,
+    grayscale: 0,
+    sepia: 20,
+    opacity: 100,
+    invert: 0,
+  },
+
+  noir: {
+    brightness: 95,
+    contrast: 170,
+    saturation: 0,
+    hueRotation: 0,
+    blur: 0,
+    grayscale: 100,
+    sepia: 15,
+    opacity: 100,
+    invert: 0,
+  }
+};
+
+Object.keys(presets).forEach(presetName => {
+  const presetButton = document.createElement("button")
+  presetButton.classList.add("btn")
+  presetButton.innerText = presetName
+  presetContainer.appendChild(presetButton)
+
+  presetButton.addEventListener("click", () => {
+    const preset = presets[presetName]
+    console.log(preset)
+    Object.keys(preset).forEach(filterName => {
+      filters[filterName].value = preset[filterName]
+    })
+    applyFilters()
+    filtersContainer.innerHTML = "" //clear the filters container
+    createFilters() //recreate the filter elements with preset values
+
+  })
+})

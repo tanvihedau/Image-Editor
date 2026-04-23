@@ -153,7 +153,7 @@ main section .right .filter input::-webkit-slider-thumb {
 }
 
 canvas{
-  background-color: turquoise;
+  display: none;
   max-width: 600px;
   max-height: 800px;
 }

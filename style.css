@@ -11,19 +11,23 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background:
-    radial-gradient(circle at 10% 10%, rgba(103, 194, 245, 0.18), transparent 30%),
-    radial-gradient(circle at 90% 20%, rgba(86, 186, 143, 0.18), transparent 35%),
+    radial-gradient(circle at 10% 10%, rgba(128, 187, 224, 0.16), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(108, 178, 172, 0.14), transparent 35%),
     var(--bg-primary-color);
   color: var(--text-primary-color);
+  overflow: hidden;
 }
 
 main {
   width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 main section {
   width: 100%;
-  padding: var(--padding-2xl);
+  height: 100%;
+  padding: clamp(1rem, 2vw, var(--padding-2xl));
   display: flex;
   gap: var(--gutter-2xl);
 }
@@ -61,6 +65,7 @@ main section .left {
   gap: var(--gutter-lg);
   width: 70%;
   align-items: center;
+  min-height: 0;
 }
 
 main section .right {
@@ -70,6 +75,8 @@ main section .right {
   border-radius: var(--border-radius-2xl);
   border: 1px solid var(--border-subtle-color);
   box-shadow: var(--shadow-md);
+  min-height: 0;
+  overflow-y: auto;
 }
 
 main section .top {
@@ -82,8 +89,9 @@ main section .bottom {
   background:
     linear-gradient(160deg, var(--bg-canvas-alt-color), var(--bg-canvas-color));
   width: 100%;
-  padding: var(--padding-2xl);
-  aspect-ratio: 5/3;
+  flex: 1;
+  min-height: 0;
+  padding: var(--padding-xl);
   border-radius: var(--border-radius-2xl);
   display: flex;
   justify-content: center;

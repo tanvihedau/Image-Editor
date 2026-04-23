@@ -1,20 +1,24 @@
 :root{
-    /* bg Colors */
-    --bg-primary-color: rgb(10, 14, 20);
-    --bg-secondary-color: rgb(21, 30, 43);
-    --bg-active-color: rgb(223, 233, 243);
-    --bg-danger-color: rgb(216, 109, 109);
-    --bg-success-color: rgb(86, 186, 143);
-    --bg-canvas-color: rgb(16, 24, 35);
-    --bg-canvas-alt-color: rgb(28, 41, 58);
+/* bg colors */
+---bg-primary-color: #fff5f7;
+--bg-secondary-color: #ffe4ec;
+--bg-active-color: #fffafb;
+--bg-danger-color: #ffccd7;
+--bg-success-color: #d8f3dc;
+--bg-canvas-color: #fff0f5;
+--bg-canvas-alt-color: #fff7fa;
 
-    /* text colors */
-    --text-primary-color: rgb(245, 248, 252);
-    --text-secondary-color: rgb(169, 184, 202);
-    --text-tertiary-color: rgb(124, 142, 164);
-    --text-active-color: rgb(10, 19, 30);
-    --accent-color: rgb(103, 194, 245);
-    --border-subtle-color: rgb(52, 72, 96);
+--text-primary-color: #684b59;
+--text-secondary-color: #876676;
+--text-tertiary-color: #a68897;
+--text-active-color: #4d3340;
+
+--accent-color: #f6b3c8;
+--border-subtle-color: #ffd4e2;
+
+
+
+
 
 
     /* paddings */
@@ -51,7 +55,7 @@
     --border-radius-2xl :0.5rem;
 
     /* shadow */
-    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.25);
-    --shadow-lg: 0 18px 45px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 10px 26px rgba(82, 108, 136, 0.16);
+    --shadow-lg: 0 18px 40px rgba(82, 108, 136, 0.2);
 
 }
